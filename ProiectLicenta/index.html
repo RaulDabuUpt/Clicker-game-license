@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title> Mutation Clicker | 0</title>
+</head>
+<body>
+<body style = "background: url(images/background.png);
+			   background-size:cover;">
+	<div class="saving">
+		<button class="import" onclick="game.saving.openBox('import')">Import</button>
+		<button class="export" onclick="game.saving.openBox('export')">Export</button>
+	  <button class="export wipe" onclick="game.saving.wipeSave()">Wipe Save</button>
+	</div>
+	<div class="importExportBox">
+		<div>
+			<textarea id="saveBox" maxlength="5000"></textarea>
+			<button onclick="game.saving.closeBox()">Close</button>
+		</div>
+	</div>
+	<div class="mutationContainer">
+		<b class="mutationDisplay">0</b></br>
+		mps : <b class="mpsDisplay">0</b> | mpc : <b class="mpcDisplay">0</b>
+		<button class="mutationButton"><img src="images/untitled.png"/></button>
+	</div>
+	<button onclick="Details()">Details</button>
+	<div class="shopContainer">
+		<div class="shopList"></div>
+		<div class="shop"></div>
+	</div>
+		<div id="optionContainer" style = "depth:-1;
+									   position:relative;
+									   left:900px;
+									   width:120px;
+									   height:400px;">
+	Current Mutations: <b class="mutationDisplay">0</b><br>
+	Mutations per click: <b class="mpcDisplay">0</b><br>
+	Mutations per second: <b class="mpsDisplay">0</b><br>
+	Total Mutations: <b class="earnedDisplay">0</b><br>
+	Used Mutations: <b class="spentDisplay">0</b><br>
+	Clicks : <b class="clickedDisplay">0</b><br>
+	</div>
+
+	<script src="game.js"></script>
+</body>
+</html>
